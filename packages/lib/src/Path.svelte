@@ -17,6 +17,7 @@
 	on:transitionend={() => dispatch("transition-end")}
 	class="path"
 >
+	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div class="name" on:click={() => emit("click-path", name)} class:active={isActive}>
 		{name}
 	</div>

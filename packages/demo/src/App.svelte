@@ -34,7 +34,7 @@
 </div>
 
 <div class="example t">
-	<dpg-aldar-ui-header {breadcrumbs} {active} on:click-path={(e) => goTo(e?.detail)} />
+	<n1ce-test {breadcrumbs} {active} on:click-path={(e) => goTo(e?.detail)} />
 </div>
 
 <style lang="scss">

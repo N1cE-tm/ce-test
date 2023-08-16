@@ -16,7 +16,7 @@ export default defineConfig({
 		svelte({
 			preprocess: sveltePreprocess(),
 			exclude: /\.wc\.svelte$/ as any,
-			hot: false,
+			// hot: false,
 			emitCss: false,
 			compilerOptions: {
 				customElement: false,
@@ -25,8 +25,8 @@ export default defineConfig({
 		svelte({
 			preprocess: sveltePreprocess(),
 			include: /\.wc\.svelte$/ as any,
-			hot: false,
-			emitCss: false,
+			// hot: false,
+			// emitCss: false,
 			compilerOptions: {
 				customElement: true,
 			},

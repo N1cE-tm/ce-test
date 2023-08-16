@@ -17,6 +17,7 @@
 	<Breadcrumbs {breadcrumbs} {isCollapsed} {active} {delimetr} />
 	{#if breadcrumbs?.length > 1 && hasCollapser}
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div class="collapser" on:click={() => (isCollapsed = !isCollapsed)}>123</div>
 	{/if}
 </div>

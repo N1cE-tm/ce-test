@@ -1,7 +1,15 @@
-<svelte:options tag="dpg-aldar-ui-header" />
+<svelte:options
+	customElement={{
+		// tag: "dpg-aldar-ui-header",
+		tag: "",
+		props: {
+			name: { reflect: true, type: "Number", attribute: "element-index" },
+		},
+	}}
+/>
 
 <script lang="ts">
-	import { get_current_component, onMount, setContext } from "svelte/internal";
+	import { get_current_component, onMount, setContext, createEventDispatcher } from "svelte/internal";
 	import Header from "./Header.svelte";
 
 	/**
@@ -18,7 +26,11 @@
 	 * Hacks
 	 */
 	const component = get_current_component();
-	const emit = (name, detail) => component.dispatchEvent(new CustomEvent(name, { detail }));
+
+	// console.log(component);
+
+	// const emit = (name, detail) => component.dispatchEvent(new CustomEvent(name, { detail }));
+	const emit = createEventDispatcher();
 	let mounted = false;
 	onMount(() => {
 		mounted = true;

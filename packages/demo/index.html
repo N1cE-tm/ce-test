@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset='utf-8'>
-    <link rel="icon" type="image/svg+xml" href="/svelte.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Svelte Web Components Demo</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/svelte.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Svelte Web Components Demo</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<n1ce-test />
+
+		<!-- <script type="module" src="/n1ce.test.min.js"></script>
+		<script type="module">
+			let breadcrumbs = ["map", "something", "florplan", "vr"];
+			let active = "vr";
+
+			let newState = "state";
+
+			const goTo = (name) => {
+				console.log(name);
+
+				if (!name) return;
+				active = name;
+				if (breadcrumbs.includes(name)) {
+					breadcrumbs = breadcrumbs.slice(0, breadcrumbs.indexOf(name) + 1);
+          _.breadcrumbs = breadcrumbs;
+          _.active = active;
+					return;
+				} else {
+					breadcrumbs = [...breadcrumbs, name];
+					return;
+				}
+			};
+
+			const addState = () => {
+				goTo(newState);
+
+				newState = "";
+			};
+
+			const _ = document.querySelector("dpg-aldar-ui-header");
+			_.breadcrumbs = breadcrumbs;
+			_.active = active;
+			_.addEventListener("click-path", (e) => goTo(e?.detail));
+		</script> -->
+		<script type="module" src="/src/main.ts"></script>
+	</body>
 </html>

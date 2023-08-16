@@ -34,18 +34,18 @@ export default defineConfig({
 		},
 	},
 	plugins: [
+		// svelte({
+		// 	preprocess: sveltePreprocess(),
+		// 	exclude: /\.wc\.svelte$/ as any,
+		// 	emitCss: false,
+		// 	compilerOptions: {
+		// 		customElement: false,
+		// 	},
+		// }),
 		svelte({
 			preprocess: sveltePreprocess(),
-			exclude: /\.wc\.svelte$/ as any,
-			emitCss: false,
-			compilerOptions: {
-				customElement: false,
-			},
-		}),
-		svelte({
-			preprocess: sveltePreprocess(),
-			include: /\.wc\.svelte$/ as any,
-			emitCss: false,
+			// include: /\.wc\.svelte$/ as any,
+			// emitCss: false,
 			compilerOptions: {
 				customElement: true,
 			},
